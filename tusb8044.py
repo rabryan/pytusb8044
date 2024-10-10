@@ -60,9 +60,8 @@ if __name__ == '__main__':
     feature_report = ifc._get_report_feature()
     print("Got feature report value of {}".format(feature_report.tobytes()))
     
-    #set GPIO 0-7 as outputs
     
-    #ifc.i2c_write
-
+    #write 0xdeadbeef on i2c
+    ifc.i2c_write(0x04, bytes([0xde, 0xad, 0xbe, 0xef]))
 
 
